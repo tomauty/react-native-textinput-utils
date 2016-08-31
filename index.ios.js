@@ -1,10 +1,12 @@
 'use strict';
-
-const React = require('react');
-
-const {findNodeHandle, TextInput, DeviceEventEmitter, NativeModules: {
-        KeyboardToolbar
-    }, processColor} = require('react-native');
+import React from 'react';
+import {
+    findNodeHandle,
+    TextInput,
+    DeviceEventEmitter,
+    NativeModules: { KeyboardToolbar },
+    processColor,
+} from 'react-native';
 
 class RCTKeyboardToolbarHelper {
     static sharedInstance = new RCTKeyboardToolbarHelper();
@@ -90,7 +92,7 @@ class RCTKeyboardToolbarManager {
     }
 }
 
-class RCTKeyboardToolbarTextInput extends React.Component {
+class RCTKeyboardToolbarTextInput extends Component {
     componentDidMount() {
         var pickerViewData = [];
         if (this.props.pickerViewData) {
