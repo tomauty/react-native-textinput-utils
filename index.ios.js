@@ -4,9 +4,11 @@ import {
     findNodeHandle,
     TextInput,
     DeviceEventEmitter,
-    NativeModules: { KeyboardToolbar },
+    NativeModules,
     processColor,
 } from 'react-native';
+
+const KeyboardToolbar = NativeModules.KeyboardToolbar;
 
 class RCTKeyboardToolbarHelper {
     static sharedInstance = new RCTKeyboardToolbarHelper();
